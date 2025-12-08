@@ -1,26 +1,24 @@
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google";
+import { Titillium_Web, Archivo } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-const outfit = Outfit({
-  variable: "--font-outfit",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-  title: "StackNothing | Versatile Web Development Agency",
-  description: "A versatile web development agency turning ideas into reality.",
-};
-
 import { Navbar } from "@/components/ui/navbar";
 import { Footer } from "@/components/ui/footer";
 
-// ... existing imports
+const titillium = Titillium_Web({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "600", "700", "900"],
+  variable: "--font-heading",
+});
+
+const archivo = Archivo({
+  subsets: ["latin"],
+  variable: "--font-body",
+});
+
+export const metadata: Metadata = {
+  title: "StackNothing | Intelligent Digital Realities",
+  description: "We merge unconventional creativity with cutting-edge AI to craft digital experiences that think, adapt, and outperform.",
+};
 
 export default function RootLayout({
   children,
@@ -30,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${outfit.variable} antialiased bg-background text-foreground flex flex-col min-h-screen`}
+        className={`${archivo.variable} ${titillium.variable} antialiased bg-background text-foreground flex flex-col min-h-screen font-body`}
       >
         <Navbar />
         <main className="flex-grow pt-20">

@@ -39,15 +39,15 @@ export default function AboutPage() {
         })
     })
 
-    // Value Cards Stagger
-    gsap.from(".value-card", {
+    // Value Items Stagger
+    gsap.from(".value-item", {
         opacity: 0,
-        y: 50,
-        stagger: 0.15,
-        duration: 0.8,
+        x: -50,
+        stagger: 0.2,
+        duration: 1,
         scrollTrigger: {
-            trigger: ".values-grid",
-            start: "top 80%"
+            trigger: ".value-item", // Trigger on the first item or the container
+            start: "top 85%"
         }
     })
 
@@ -86,18 +86,25 @@ export default function AboutPage() {
 
         {/* Values Section */}
         <div className="mb-32">
-            <h2 className="text-center text-4xl font-bold font-heading text-primary dark:text-white mb-16">Our Core Values</h2>
-            <div className="values-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <h2 className="text-sm font-bold text-brand-red mb-12 uppercase tracking-widest">Our Core Values</h2>
+            
+            <div className="flex flex-col border-t border-gray-200 dark:border-white/10">
                 {[
-                    { icon: Lightbulb, title: "Innovation", desc: "Pushing boundaries effectively." },
-                    { icon: Target, title: "Flexibility", desc: "Adapting to any tech stack." },
-                    { icon: Users, title: "Collaboration", desc: "Working as one with you." },
-                    { icon: Rocket, title: "Impact", desc: "Delivering real results." }
+                    { id: "01", title: "Innovation", desc: "We don't just follow trends; we set them by integrating the latest AI and web tech." },
+                    { id: "02", title: "Transparency", desc: "No hidden costs. No jargon. Just clear communication and honest work." },
+                    { id: "03", title: "Speed", desc: "We ship fast without breaking things. Efficiency is baked into our process." },
+                    { id: "04", title: "Quality", desc: "Pixel-perfect design met with robust, clean code. Zero compromise." }
                 ].map((val, i) => (
-                    <div key={i} className="value-card p-8 bg-gray-50 dark:bg-white/5 rounded-2xl border border-transparent hover:border-brand-red transition-all group">
-                        <val.icon className="w-10 h-10 text-brand-red mb-6 group-hover:scale-110 transition-transform" />
-                        <h3 className="text-xl font-bold text-primary dark:text-white mb-3">{val.title}</h3>
-                        <p className="text-gray-600 dark:text-gray-300">{val.desc}</p>
+                    <div key={i} className="value-item group flex flex-col md:flex-row items-baseline py-10 border-b border-gray-200 dark:border-white/10 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+                        <span className="text-xl font-mono text-brand-red w-24 mb-4 md:mb-0">{val.id}</span>
+                        <div className="flex-1">
+                            <h3 className="text-4xl md:text-6xl font-bold font-heading text-primary dark:text-white mb-4 group-hover:translate-x-4 transition-transform duration-300">
+                                {val.title}
+                            </h3>
+                            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-xl">
+                                {val.desc}
+                            </p>
+                        </div>
                     </div>
                 ))}
             </div>

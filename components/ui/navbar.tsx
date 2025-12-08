@@ -37,13 +37,13 @@ export function Navbar() {
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        scrolled ? "bg-white/80 backdrop-blur-md shadow-sm py-4" : "bg-transparent py-6"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent",
+        scrolled ? "bg-[#F5F3EF]/95 backdrop-blur-sm border-gray-200 py-4" : "bg-transparent py-8"
       )}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <Link href="/" className="text-2xl font-bold font-heading text-primary">
-          StackNothing
+        <Link href="/" className="text-3xl font-black font-heading tracking-tighter text-black">
+          STOA<span className="text-brand-red">.</span>
         </Link>
 
         {/* Desktop Nav */}

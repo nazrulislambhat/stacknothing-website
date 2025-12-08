@@ -1,4 +1,4 @@
-import { Code, ShoppingCart, Smartphone, Globe, Layers, Database, Layout } from "lucide-react"
+import { Code, ShoppingCart, Smartphone, Globe, Layers, Database, Layout, BrainCircuit } from "lucide-react"
 
 const services = [
   {
@@ -9,11 +9,16 @@ const services = [
   {
     icon: ShoppingCart,
     title: "E-commerce Solutions",
-    description: "We build robust, scalable e-commerce platforms that provide seamless shopping experiences.",
+    description: "Full-stack web applications built with Next.js, React, and Node.js. Scalable, secure, and fast."
+  },
+  {
+    icon: BrainCircuit,
+    title: "AI & Automation",
+    description: "Integrate LLMs, Chatbots, and intelligent workflows into your business. We build smart apps that learn."
   },
   {
     icon: Smartphone,
-    title: "Custom Software",
+    title: "Mobile Apps",
     description: "We design and develop custom software solutions tailored to your specific business needs.",
   },
   {

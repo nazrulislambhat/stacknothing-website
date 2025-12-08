@@ -60,6 +60,12 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
+          <Link href="/products" className={cn(
+              "text-sm font-medium transition-colors hover:text-primary",
+              pathname === "/products" ? "text-primary" : "text-gray-600"
+            )}>
+              Products
+          </Link>
           <a
              href="https://ui.stacknothing.com"
              target="_blank"

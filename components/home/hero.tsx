@@ -57,32 +57,30 @@ export function Hero() {
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-purple-100/50 rounded-full blur-3xl -z-10 -translate-x-1/2 translate-y-1/2" />
 
       <div className="container mx-auto px-6 text-center">
-        <h1 
-            ref={titleRef}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading mb-8 leading-[1.1] tracking-tight bg-gradient-to-r from-primary via-secondary to-brand-red bg-clip-text text-transparent pb-4"
-        >
-          We Build <br /> Nothing Into Anything.
-        </h1>
-        
-        <p 
-            ref={subTitleRef}
-            className="text-lg md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed font-light"
-        >
-          StackNothing is a versatile web development agency. We take your raw ideas and minimal concepts—starting from "nothing"—and build them into powerful, production-ready digital realities. 
-          React, Next.js, Drupal, and beyond.
-        </p>
-
-        <div ref={buttonsRef} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link href="/contact">
-            <Button size="lg" variant="primary" className="w-full sm:w-auto text-lg px-8">
-              Start a Project
-            </Button>
-          </Link>
-          <Link href="/services">
-            <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg px-8">
-              View Services
-            </Button>
-          </Link>
+        <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
+            <h1 ref={titleRef} className="hero-text text-6xl md:text-9xl font-bold mb-6 font-heading tracking-tight">
+            BUILDING <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red via-brand-yellow to-brand-red bg-300% animate-gradient">
+                INTELLIGENT
+            </span> <br />
+            REALITIES.
+            </h1>
+            <p ref={subTitleRef} className="hero-text text-xl md:text-2xl text-gray-400 mb-10 max-w-2xl mx-auto font-light">
+            We merge unconventional creativity with cutting-edge AI to craft digital experiences that don't just exist—they think, adapt, and outperform.
+            </p>
+            
+            <div ref={buttonsRef} className="hero-btn flex flex-col md:flex-row items-center justify-center gap-6">
+            <Link href="/start-project">
+                <Button size="lg" className="h-14 px-8 text-lg rounded-full">
+                Start AI Project
+                </Button>
+            </Link>
+            <Link href="/products">
+                <Button variant="outline" size="lg" className="h-14 px-8 text-lg rounded-full border-white/20 hover:bg-white/10 text-white">
+                View Our Products
+                </Button>
+            </Link>
+            </div>
         </div>
       </div>
     </section>

@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# StackNothing Technologies Pvt. Ltd.
 
-## Getting Started
+Welcome to the official repository for **StackNothing Technologies Pvt. Ltd.** — a modern technology company focused on delivering cutting-edge digital solutions for startups, enterprises, and individual innovators.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🌐 Company Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**StackNothing Technologies Pvt. Ltd.** is a full-stack product development company specializing in frontend-heavy applications, cloud-native architectures, and cross-platform solutions. We help businesses go from concept to market faster with highly scalable and maintainable software.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧪 Development Domain
 
-## Learn More
+- [`https://stacknothing.vercel.app/`](https://stacknothing.vercel.app/)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Production Domains
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [`https://stacknothing.com`](https://stacknothing.com)
+- Other live domains may vary based on client/project configurations.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠 Tech Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Frontend
+- **React.js**, **Next.js (App Router)**, **TypeScript**
+- Tailwind CSS, Framer Motion
+- Progressive Web Apps (PWA)
+- Offline Support using IndexedDB
+- SSR/SSG via Next.js
+
+### Backend
+- Firebase (Auth, Firestore, Functions)
+- Node.js (Express / NestJS)
+- Supabase, PostgreSQL, MongoDB
+- RESTful and GraphQL APIs
+
+### DevOps & Hosting
+- Vercel, Netlify, Firebase Hosting
+- GitHub Actions / GitLab CI/CD
+- Docker (where needed)
+
+### Monitoring & Analytics
+- Sentry, PostHog, LogRocket
+- Google Analytics, Plausible
+
+---
+
+## 💼 Services
+
+- 🔧 **Custom Web & App Development**
+- 🛒 **E-commerce Platforms** (Headless WooCommerce, Shopify, etc.)
+- 🌐 **Web Apps & PWAs** using modern JS frameworks
+- 📱 **Cross-platform Mobile Apps** (React Native, Capacitor)
+- ☁️ **Cloud & Serverless Integrations** (Firebase, Supabase, AWS)
+- 🔐 **Authentication Systems** (Google OAuth, Firebase Auth, JWT)
+- 🧩 **Product Prototyping & MVP Builds**
+- 🎨 **UI/UX Design Systems & Figma-to-Code**
+
+---
+
+## 📫 Contact
+
+- 🌍 Website: [https://stacknothing.com](https://stacknothing.com)
+- 📧 Email: `nazrul@stacknothing.com`
+- 💼 LinkedIn: [linkedin.com/company/stacknothing](https://linkedin.com/company/stacknothing)
+
+---
+
+## 🤝 Careers
+
+We're hiring developers, designers, and creative technologists who love to build clean, performant, and scalable software. Join us remotely and help shape the future of tech.
+
+---
+
+**© StackNothing Technologies Pvt. Ltd.** – All rights reserved.

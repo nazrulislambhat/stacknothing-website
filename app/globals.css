@@ -1,34 +1,40 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme inline {
-  --color-primary: #000000;
-  --color-secondary: #ffffff;
-  --color-brand-red: #FF4D00;
-  --color-brand-black: #000000;
-  --color-brand-yellow: #FFE66D;
-  
+  --color-primary: #0d00a4;
+  --color-secondary: #240b36;
+  --color-red: #fc5130;
+  --color-black: #04052e;
+  --color-yellow: #ffe66d;
+
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);
 
   --animate-gradient: gradient 8s linear infinite;
 
   @keyframes gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
 }
 
 :root {
-  --background: #F5F3EF;
+  --background: #f5f3ef;
   --foreground: #000000;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     /* Stoa is primarily light mode, but we keep a dark variant just in case, aiming for deep black */
-    --background: #050505; 
-    --foreground: #F5F3EF;
+    --background: #050505;
+    --foreground: #f5f3ef;
   }
 }
 
@@ -42,6 +48,11 @@ body {
   font-family: var(--font-body);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading), sans-serif;
 }

@@ -1,48 +1,53 @@
-"use client"
+'use client';
 
-import * as React from "react"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X } from "lucide-react"
-import { cn } from "@/lib/utils"
-import { Button } from "./button"
+import * as React from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { Button } from './button';
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/contact", label: "Contact" },
-]
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/services', label: 'Services' },
+  { href: '/pricing', label: 'Pricing' },
+  { href: '/contact', label: 'Contact' },
+];
 
 export function Navbar() {
-  const [isOpen, setIsOpen] = React.useState(false)
-  const pathname = usePathname()
-  const [scrolled, setScrolled] = React.useState(false)
+  const [isOpen, setIsOpen] = React.useState(false);
+  const pathname = usePathname();
+  const [scrolled, setScrolled] = React.useState(false);
 
   React.useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Close mobile menu on route change
   React.useEffect(() => {
-    setIsOpen(false)
-  }, [pathname])
+    setIsOpen(false);
+  }, [pathname]);
 
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent",
-        scrolled ? "bg-[#F5F3EF]/95 backdrop-blur-sm border-gray-200 py-4" : "bg-transparent py-8"
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent',
+        scrolled
+          ? 'bg-[#F5F3EF]/95 backdrop-blur-sm border-gray-200 py-4'
+          : 'bg-transparent py-8'
       )}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <Link href="/" className="text-3xl font-black font-heading tracking-tighter text-black">
+        <Link
+          href="/"
+          className="text-3xl font-black font-heading tracking-tighter text-black"
+        >
           STOA<span className="text-brand-red">.</span>
         </Link>
 
@@ -53,32 +58,43 @@ export function Navbar() {
               key={link.href}
               href={link.href}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
-                pathname === link.href ? "text-primary" : "text-gray-600"
+                'text-sm font-medium transition-colors hover:text-primary',
+                pathname === link.href ? 'text-primary' : 'text-gray-600'
               )}
             >
               {link.label}
             </Link>
           ))}
-          <Link href="/products" className={cn(
-              "text-sm font-medium transition-colors hover:text-primary",
-              pathname === "/products" ? "text-primary" : "text-gray-600"
-            )}>
-              Products
+          <Link
+            href="/products"
+            className={cn(
+              'text-sm font-medium transition-colors hover:text-primary',
+              pathname === '/products' ? 'text-primary' : 'text-gray-600'
+            )}
+          >
+            Products
           </Link>
           <a
-             href="https://ui.stacknothing.com"
-             target="_blank"
-             rel="noopener noreferrer"
-             className="text-sm font-medium transition-colors text-gray-600 hover:text-brand-red"
+            href="https://ui.stacknothing.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium transition-colors text-gray-600 hover:text-brand-red"
           >
             UI Library
           </a>
           <Link href="/hire">
-            <span className="text-sm font-medium transition-colors text-gray-600 hover:text-primary cursor-pointer">Hire Devs</span>
+            <span className="text-sm font-medium transition-colors text-gray-600 hover:text-primary cursor-pointer">
+              Hire Devs
+            </span>
           </Link>
           <Link href="/contact">
-            <Button variant="primary" size="sm">Get Started</Button>
+            <Button
+              variant="primary"
+              size="sm"
+              className="bg-red text-white rounded-full cursor-pointer font-semibold hover:bg-primary hover:text-white"
+            >
+              Get Started
+            </Button>
           </Link>
         </div>
 
@@ -96,7 +112,7 @@ export function Navbar() {
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
+            animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-white border-b"
           >
@@ -106,20 +122,22 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "block text-base font-medium py-2",
-                    pathname === link.href ? "text-primary" : "text-gray-600"
+                    'block text-base font-medium py-2',
+                    pathname === link.href ? 'text-primary' : 'text-gray-600'
                   )}
                 >
                   {link.label}
                 </Link>
               ))}
               <Link href="/contact" className="pt-2">
-                 <Button variant="primary" className="w-full">Get Started</Button>
+                <Button variant="primary" className="w-full">
+                  Get Started
+                </Button>
               </Link>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
     </nav>
-  )
+  );
 }
